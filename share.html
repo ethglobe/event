@@ -1,0 +1,272 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://website.planet.ee/gray.css" >
+ <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+  
+<style>
+
+:root {
+  --border-size: 0.125rem;
+  --duration: 250ms;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --font-family: monospace;
+  --color-primary: white;
+  --color-secondary: black;
+  --color-tertiary: dodgerblue;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --space: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+}
+
+.multi-button {
+  display: flex;
+  width: 65%;
+  box-shadow: var(--shadow) 4px 4px;
+      margin: 5 auto;
+
+}
+
+.multi-button button {
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  padding:
+    calc(var(--space) / 1.125)
+    var(--space)
+    var(--space);
+  border: var(--border-size) solid black;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  font-size: 1.15rem;
+  font-family: var(--font-family);
+  text-transform: lowercase;
+  text-shadow: var(--shadow) 2px 2px;
+  transition: flex-grow var(--duration) var(--ease);
+}
+
+.multi-button button + button {
+  border-left: var(--border-size) solid black;
+  margin-left: calc(var(--border-size) * -1);
+}
+
+.multi-button button:hover,
+.multi-button button:focus {
+  flex-grow: 2;
+  color: white;
+  outline: none;
+  text-shadow: none;
+  background-color: var(--color-secondary);
+}
+
+.multi-button button:focus {
+  outline: var(--border-size) dashed var(--color-primary);
+  outline-offset: calc(var(--border-size) * -3);
+}
+
+.multi-button:hover button:focus:not(:hover) {
+  flex-grow: 1;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  outline-color: var(--color-tertiary);
+}
+
+.multi-button button:active {
+  transform: translateY(var(--border-size));
+}
+
+
+
+
+@import url(&quot;https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap&quot;);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  display: grid;
+  font-family: &quot;Poppins&quot;, sans-serif;
+  place-items: center;
+}
+
+.wrapper {
+  display: inline-flex;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: &quot;&quot;;
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .mail:hover,
+.wrapper .mail:hover .tooltip,
+.wrapper .mail:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage(&quot;resize&quot;, &quot;*&quot;);
+  }
+</script>
+</head>
+<body onload="myFunction()">
+
+<img src="gettext.jpg" draggable=false>
+<br>
+<div style="text-align:center;">
+	
+<script>
+var random123 = (Math.random() + 1).toString(36).substring(7);
+function myFunction() {
+  document.getElementById("txtLink").value = "https://ethglobe.github.io/event/ref=?" + random123;
+}
+</script>
+	
+<input type="text" id="txtLink" class="txt rounded text-input required fa-mail-bulk" value="a" readonly>
+<br>
+<div class="multi-button">
+  <button value="Copy" onclick ="CopyToLabel()">Copy URL</button>
+</div>
+<script type="text/javascript">
+    function CopyToLabel() {
+  var content = document.getElementById('txtLink');
+    
+    content.select();
+    document.execCommand('copy');
+
+    }
+</script>
+<br>
+<img src="getshare.jpg" draggable=false>
+<br>
+<div class="wrapper">
+  <div class="icon instagram">
+    <div class="tooltip">Email</div>
+    <span><a href="mailto:?subject=Enter to Win upto 200 Ethereum &body=Hey,%0D%0A%0D%0AHave you entered this giveaway to win '200 Ethereum'?%0D%0A%0D%0AIf you refer friends you get more chances to win :)%0D%0A%0D%0ALink: https://ethglobe.github.io/event/" onclick="location.href=this.href+random123;return false;"><img src="email.png" height="35" width="35"></a></span>
+  </div>
+    <div class="icon instagram">
+    <div class="tooltip">SMS</div>
+    <span><a href="sms:?body=Hey,%0D%0A%0D%0AHave you entered this giveaway to win '200 Ethereum'?%0D%0A%0D%0AIf you refer friends you get more chances to win :)%0D%0A%0D%0ALink: https://ethglobe.github.io/event/" onclick="location.href=this.href+random123;return false;"><img src="sms.png" height="35" width="35"></a></span>
+  </div>
+  <div class="icon facebook">
+    <div class="tooltip">Facebook</div>
+    <span><a href="https://www.facebook.com/sharer/sharer.php?u=https://ethglobe.github.io/event/" target="_blank" onclick="location.href=this.href+random123;return false;"><img src="fb.png" height="35" width="35"></a></span>
+  </div>
+  <div class="icon twitter">
+    <div class="tooltip">Twitter</div>
+    <span><a href="https://twitter.com/intent/tweet?text='Exipure 6 Bottle Exclusive' Giveaway%0D%0A%0D%0AIf you refer friends you get more chances to win :)%0D%0A%0D%0A Link:https://ethglobe.github.io/event/ref=?" onclick="window.open('location.href=this.href+random123;return false;', '_blank');"><img src="twitter.png" height="35" width="35"></a></span>
+  </div>
+  <div class="icon youtube">
+    <div class="tooltip">Youtube</div>
+    <span><i class="fab fa-youtube"></i></span>
+  </div>
+</div>
+<br><br>
+<img src="getnote.jpg" draggable=false>	
+</div>
+</body>
+</html>
